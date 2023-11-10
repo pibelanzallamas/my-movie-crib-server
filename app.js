@@ -8,7 +8,7 @@ const models = require("./models");
 
 app.use(
   cors({
-    origin: "localhost:3000",
+    origin: "https://my-movie-crib-front.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
   })
