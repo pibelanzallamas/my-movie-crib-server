@@ -10,7 +10,7 @@ movies.get(`/home/:pag`, (req, res) => {
       `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=es-MX&page=${pag}`
     )
     .then((response) => {
-      const movies = response.data.results;
+      const movies = response.data.results.slice(0, 18);;
       res.send(movies);
     });
 });
